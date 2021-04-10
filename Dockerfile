@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 8080
 
 # Define the Docker image's behavior at runtime
-CMD ["node", "src/server.ts"]
+CMD ["node", "src/server.js"]
