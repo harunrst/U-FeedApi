@@ -15,7 +15,16 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t u-feed-api .
+  - docker build -t u-feed-api . 
+    --build-arg POSTGRES_USERNAME="$POSTGRES_USERNAME"
+    --build-arg POSTGRES_PASSWORD="$POSTGRES_PASSWORD"
+    --build-arg POSTGRES_HOST="$POSTGRES_HOST"
+    --build-arg POSTGRES_DB="$POSTGRES_DB"
+    --build-arg AWS_BUCKET="$AWS_BUCKET"
+    --build-arg AWS_REGION="$AWS_REGION"
+    --build-arg AWS_PROFILE="$AWS_PROFILE"
+    --build-arg JWT_SECRET="$JWT_SECRET"
+    --build-arg URL="$URL"
   - docker tag u-feed-api harunrst/u-feed-api:latest
 
 after_success:
