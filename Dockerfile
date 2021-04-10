@@ -2,7 +2,7 @@
 FROM node:13
 
 # Create app directory
-WORKDIR /usr/app/src
+WORKDIR /usr/app
 
 # Install app dependencies by copying
 # package.json and package-lock.json
