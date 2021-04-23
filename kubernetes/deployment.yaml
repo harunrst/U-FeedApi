@@ -19,3 +19,9 @@ spec:
         image: harunrst/u-feed-api
         ports:
         - containerPort: 80
+        livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 15
