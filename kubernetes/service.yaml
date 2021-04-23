@@ -10,4 +10,4 @@ spec:
     protocol: TCP
   selector:
     app: feedapi
-  type: LoadBalancer
+  type: ClusterIP
