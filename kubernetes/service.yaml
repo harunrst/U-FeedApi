@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: feedapi
   labels:
-    run: feedapi
+    app: feedapi
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    run: feedapi
+    app: feedapi
+  type: LoadBalancer
